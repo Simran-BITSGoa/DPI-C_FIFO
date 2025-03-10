@@ -1,55 +1,85 @@
+`timescale 1ns/1ps
+
 module testbench;
-    import "DPI-C" function void send_packet(output logic [7:0] pkt);
-    import "DPI-C" function void request_packet();
 
-    logic write_clk = 0, read_clk = 0;
-    logic write_en, read_en;
-    logic [7:0] packet_in;   // Single byte
-    logic [7:0] packet_out;  // Single byte
-    logic fifo_full, fifo_empty;
+    import "DPI-C" function void request_packet(output byte pkt[10]);
 
-    fifo dut (
+    logic write_clk, read_clk, rst, write_en, read_en;
+    logic [79:0] data_in;
+    logic [79:0] data_out;
+    logic full, empty;
+    string read_str;
+
+    // Instantiate FIFO
+    fifo fifo_inst (
         .write_clk(write_clk),
         .read_clk(read_clk),
+        .rst(rst),
         .write_en(write_en),
         .read_en(read_en),
-        .data_in(packet_in),   // Single byte
-        .data_out(packet_out), // Single byte
-        .full(fifo_full),
-        .empty(fifo_empty)
+        .data_in(data_in),
+        .data_out(data_out),
+        .full(full),
+        .empty(empty)
     );
 
-    always #10 write_clk = ~write_clk;  // 50 MHz ? 20 ns period
-    always #20 read_clk = ~read_clk;    // 25 MHz ? 40 ns period
+    // Clock Generation
+    always #5 write_clk = ~write_clk;  // 10ns period
+    always #7 read_clk = ~read_clk;    // 14ns period
 
     initial begin
-        request_packet();  // Reset message index
+        write_clk = 0;
+        read_clk = 0;
+        rst = 1;
+        write_en = 0;
+        read_en = 0;
+        data_in = 0;
 
-        repeat (13) begin  // Send 13 characters of "Hello, World!"
-            if (!fifo_full) begin
-                send_packet(packet_in);
-                write_en = 1;
-            end else begin
-                write_en = 0;
+        #50 rst = 0;  // Hold reset longer
+
+        // Print initial FIFO status
+        $display("[TB] Time=%0t | FULL=%b | EMPTY=%b", $time, full, empty);
+
+        // **Write Until Full**
+        while (!full) begin
+            byte pkt[10];
+            request_packet(pkt);
+            
+            // Convert byte array to 80-bit logic
+            for (int j = 0; j < 10; j++) begin
+                data_in[j*8 +: 8] = pkt[j];  
             end
-            #20;  // Write clock period
+
+            write_en = 1;
+            #15;  // Hold write enable for multiple cycles
+            write_en = 0;
+            #20;
+
+            $display("[TB] Time=%0t | FULL=%b | EMPTY=%b", $time, full, empty);
         end
-        write_en = 0;  // Stop writing
+        $display("[TB] FIFO FULL: Stopping Writes!");
 
-        #100;
-
-        repeat (13) begin  // Read all 13 characters
-            if (!fifo_empty) begin
-                read_en = 1;
-            end else begin
-                read_en = 0;
+        // **Start Reading Until Empty**
+        while (!empty) begin
+            read_en = 1;
+            #15;  // Keep read enable high longer
+            read_en = 0;
+            #10;  // Allow FIFO output to settle
+            
+            // Reset read_str before accumulating characters
+            read_str = "";
+            for (int i = 0; i < 10; i++) begin
+                read_str = {read_str, data_out[i*8 +: 8]};
             end
-            #40;  // Read clock period
-        end
-        read_en = 0;  // Stop reading
+            $display("[SV] Read Data: %s", read_str);
+            $display("[TB] Time=%0t | FULL=%b | EMPTY=%b", $time, full, empty);
 
-        #100;
-        $finish;
+            #20;
+        end
+        $display("[TB] FIFO EMPTY: Stopping Reads!");
+
+        #100 $finish;
     end
+
 endmodule
 
