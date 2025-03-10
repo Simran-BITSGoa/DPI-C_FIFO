@@ -1,0 +1,379 @@
+# //  Questa Sim
+# //  Version 2025.1 linux Jan 18 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# vsim -sv_lib ./request_packet -voptargs="+acc" work.testbench 
+# Start time: 07:50:33 on Mar 10,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.testbench(fast)
+# Loading work.fifo(fast)
+# Loading ././request_packet.so
+add wave -position insertpoint  \
+sim:/testbench/write_clk \
+sim:/testbench/read_clk \
+sim:/testbench/rst \
+sim:/testbench/write_en \
+sim:/testbench/read_en \
+sim:/testbench/data_in \
+sim:/testbench/data_out \
+sim:/testbench/full \
+sim:/testbench/empty \
+sim:/testbench/read_str
+run -all
+# [TB] Time=20000 | FULL=0 | EMPTY=1
+# [C] Generated packet 1: nfzL2zQl1Z
+# [TB] Time=50000 | FULL=0 | EMPTY=0
+# [C] Generated packet 2: EfkFrWgX1z
+# [TB] Time=80000 | FULL=0 | EMPTY=0
+# [C] Generated packet 3: QeqwBNyw0Z
+# [TB] Time=110000 | FULL=0 | EMPTY=0
+# [C] Generated packet 4: 9d5wnxm1Wb
+# [TB] Time=140000 | FULL=0 | EMPTY=0
+# [C] Generated packet 5: Pb4zgjJC5B
+# [TB] Time=170000 | FULL=0 | EMPTY=0
+# [C] Generated packet 6: 0Lfe6ersQf
+# [TB] Time=200000 | FULL=0 | EMPTY=0
+# [C] Generated packet 7: HO6A8hwiZI
+# [TB] Time=230000 | FULL=0 | EMPTY=0
+# [C] Generated packet 8: 9oh4bCbkCW
+# [TB] Time=260000 | FULL=0 | EMPTY=0
+# [C] Generated packet 9: l2iFWcjBKy
+# [TB] Time=290000 | FULL=0 | EMPTY=0
+# [C] Generated packet 10: ePAbQ88ChV
+# [TB] Time=320000 | FULL=0 | EMPTY=0
+# [C] Generated packet 11: Ie9oWYqy7s
+# [TB] Time=350000 | FULL=0 | EMPTY=0
+# [C] Generated packet 12: Igjql5IJ5Q
+# [TB] Time=380000 | FULL=0 | EMPTY=0
+# [C] Generated packet 13: 5Zg3ywzvwU
+# [TB] Time=410000 | FULL=0 | EMPTY=0
+# [C] Generated packet 14: G2zEgJcM7Z
+# [TB] Time=440000 | FULL=0 | EMPTY=0
+# [C] Generated packet 15: 3G6cufV1oQ
+# [TB] Time=470000 | FULL=0 | EMPTY=0
+# [C] Generated packet 16: HholacXQLH
+# [TB] Time=500000 | FULL=0 | EMPTY=0
+# [C] Generated packet 17: kSAXWehwpc
+# [TB] Time=530000 | FULL=0 | EMPTY=0
+# [C] Generated packet 18: KigG8PjTGM
+# [TB] Time=560000 | FULL=0 | EMPTY=0
+# [C] Generated packet 19: iLtKxKkIYw
+# [TB] Time=590000 | FULL=0 | EMPTY=0
+# [C] Generated packet 20: Q8EOWYs1IX
+# [TB] Time=620000 | FULL=0 | EMPTY=0
+# [C] Generated packet 21: TS30W1F6JJ
+# [TB] Time=650000 | FULL=0 | EMPTY=0
+# [C] Generated packet 22: IrS1zF9ZOX
+# [TB] Time=680000 | FULL=0 | EMPTY=0
+# [C] Generated packet 23: LcUNqqlWfu
+# [TB] Time=710000 | FULL=0 | EMPTY=0
+# [C] Generated packet 24: syAlmXbpTk
+# [TB] Time=740000 | FULL=0 | EMPTY=0
+# [C] Generated packet 25: wbPFQEIQdU
+# [TB] Time=770000 | FULL=0 | EMPTY=0
+# [C] Generated packet 26: lnw50ajcvE
+# [TB] Time=800000 | FULL=0 | EMPTY=0
+# [C] Generated packet 27: Kd1KCdhdHy
+# [TB] Time=830000 | FULL=0 | EMPTY=0
+# [C] Generated packet 28: B1NO6cSFqu
+# [TB] Time=860000 | FULL=0 | EMPTY=0
+# [C] Generated packet 29: ZRXKNNiwnT
+# [TB] Time=890000 | FULL=0 | EMPTY=0
+# [C] Generated packet 30: zvwq4xHZOO
+# [TB] Time=920000 | FULL=0 | EMPTY=0
+# [C] Generated packet 31: OQGZeA1vDh
+# [TB] Time=950000 | FULL=0 | EMPTY=0
+# [C] Generated packet 32: dbx0lABJun
+# [TB] Time=980000 | FULL=0 | EMPTY=0
+# [C] Generated packet 33: bjYLNQ8VqN
+# [TB] Time=1010000 | FULL=0 | EMPTY=0
+# [C] Generated packet 34: h4dlR5mJon
+# [TB] Time=1040000 | FULL=0 | EMPTY=0
+# [C] Generated packet 35: oHEb7pZ7xK
+# [TB] Time=1070000 | FULL=0 | EMPTY=0
+# [C] Generated packet 36: kOr6Z5NYO3
+# [TB] Time=1100000 | FULL=0 | EMPTY=0
+# [C] Generated packet 37: jvvAXA57Jk
+# [TB] Time=1130000 | FULL=0 | EMPTY=0
+# [C] Generated packet 38: kyrpNnSniF
+# [TB] Time=1160000 | FULL=0 | EMPTY=0
+# [C] Generated packet 39: vGRcCrVNDj
+# [TB] Time=1190000 | FULL=0 | EMPTY=0
+# [C] Generated packet 40: EkVxkqyfl5
+# [TB] Time=1220000 | FULL=0 | EMPTY=0
+# [C] Generated packet 41: DJrtw5WFg4
+# [TB] Time=1250000 | FULL=0 | EMPTY=0
+# [C] Generated packet 42: IR8at8FDMG
+# [TB] Time=1280000 | FULL=0 | EMPTY=0
+# [C] Generated packet 43: mOq5AOjytK
+# [TB] Time=1310000 | FULL=0 | EMPTY=0
+# [C] Generated packet 44: rvUZeGUyJ0
+# [TB] Time=1340000 | FULL=0 | EMPTY=0
+# [C] Generated packet 45: qSFoqwmtzw
+# [TB] Time=1370000 | FULL=0 | EMPTY=0
+# [C] Generated packet 46: zc9dX9r7vY
+# [TB] Time=1400000 | FULL=0 | EMPTY=0
+# [C] Generated packet 47: FcJZ1leJZn
+# [TB] Time=1430000 | FULL=0 | EMPTY=0
+# [C] Generated packet 48: 7D3CrjzSSo
+# [TB] Time=1460000 | FULL=0 | EMPTY=0
+# [C] Generated packet 49: EFEDiaCNXv
+# [TB] Time=1490000 | FULL=0 | EMPTY=0
+# [C] Generated packet 50: kaOryFTSPq
+# [TB] Time=1520000 | FULL=0 | EMPTY=0
+# [C] Generated packet 51: 3KuxNZWArn
+# [TB] Time=1550000 | FULL=0 | EMPTY=0
+# [C] Generated packet 52: mwsrxPHyac
+# [TB] Time=1580000 | FULL=0 | EMPTY=0
+# [C] Generated packet 53: jA2xsq196E
+# [TB] Time=1610000 | FULL=0 | EMPTY=0
+# [C] Generated packet 54: n0OXlZx5Ze
+# [TB] Time=1640000 | FULL=0 | EMPTY=0
+# [C] Generated packet 55: iAOPrCewy2
+# [TB] Time=1670000 | FULL=0 | EMPTY=0
+# [C] Generated packet 56: OX3EJjtAgp
+# [TB] Time=1700000 | FULL=0 | EMPTY=0
+# [C] Generated packet 57: EJdQfCqS8D
+# [TB] Time=1730000 | FULL=0 | EMPTY=0
+# [C] Generated packet 58: ugD7vs7Nev
+# [TB] Time=1760000 | FULL=0 | EMPTY=0
+# [C] Generated packet 59: GsG7vPeeP8
+# [TB] Time=1790000 | FULL=0 | EMPTY=0
+# [C] Generated packet 60: HRHjiklM0j
+# [TB] Time=1820000 | FULL=0 | EMPTY=0
+# [C] Generated packet 61: PlGRgz9dBe
+# [TB] Time=1850000 | FULL=0 | EMPTY=0
+# [C] Generated packet 62: OFKUA3keXx
+# [TB] Time=1880000 | FULL=0 | EMPTY=0
+# [C] Generated packet 63: adFhClGnx6
+# [TB] Time=1910000 | FULL=0 | EMPTY=0
+# [C] Generated packet 64: LAfPRBEPeD
+# [TB] Time=1940000 | FULL=0 | EMPTY=0
+# [C] Generated packet 65: rqIz9IthmG
+# [TB] Time=1970000 | FULL=0 | EMPTY=0
+# [C] Generated packet 66: UChXij8oLt
+# [TB] Time=2000000 | FULL=0 | EMPTY=0
+# [C] Generated packet 67: iWuElBFnOk
+# [TB] Time=2030000 | FULL=0 | EMPTY=0
+# [C] Generated packet 68: r5OzvN8eui
+# [TB] Time=2060000 | FULL=0 | EMPTY=0
+# [C] Generated packet 69: iDjGaFnXry
+# [TB] Time=2090000 | FULL=0 | EMPTY=0
+# [C] Generated packet 70: GPI0Tt0XXE
+# [TB] Time=2120000 | FULL=1 | EMPTY=0
+# [TB] FIFO FULL: Stopping Writes!
+# [SV] Read Data: nfzL2zQl1Z
+# [TB] Time=2150000 | FULL=0 | EMPTY=0
+# [SV] Read Data: nfzL2zQl1Z
+# [TB] Time=2180000 | FULL=0 | EMPTY=0
+# [SV] Read Data: nfzL2zQl1Z
+# [TB] Time=2210000 | FULL=0 | EMPTY=0
+# [SV] Read Data: EfkFrWgX1z
+# [TB] Time=2240000 | FULL=0 | EMPTY=0
+# [SV] Read Data: QeqwBNyw0Z
+# [TB] Time=2270000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 9d5wnxm1Wb
+# [TB] Time=2300000 | FULL=0 | EMPTY=0
+# [SV] Read Data: Pb4zgjJC5B
+# [TB] Time=2330000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 0Lfe6ersQf
+# [TB] Time=2360000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 0Lfe6ersQf
+# [TB] Time=2390000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 0Lfe6ersQf
+# [TB] Time=2420000 | FULL=0 | EMPTY=0
+# [SV] Read Data: HO6A8hwiZI
+# [TB] Time=2450000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 9oh4bCbkCW
+# [TB] Time=2480000 | FULL=0 | EMPTY=0
+# [SV] Read Data: l2iFWcjBKy
+# [TB] Time=2510000 | FULL=0 | EMPTY=0
+# [SV] Read Data: ePAbQ88ChV
+# [TB] Time=2540000 | FULL=0 | EMPTY=0
+# [SV] Read Data: Ie9oWYqy7s
+# [TB] Time=2570000 | FULL=0 | EMPTY=0
+# [SV] Read Data: Ie9oWYqy7s
+# [TB] Time=2600000 | FULL=0 | EMPTY=0
+# [SV] Read Data: Ie9oWYqy7s
+# [TB] Time=2630000 | FULL=0 | EMPTY=0
+# [SV] Read Data: Igjql5IJ5Q
+# [TB] Time=2660000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 5Zg3ywzvwU
+# [TB] Time=2690000 | FULL=0 | EMPTY=0
+# [SV] Read Data: G2zEgJcM7Z
+# [TB] Time=2720000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 3G6cufV1oQ
+# [TB] Time=2750000 | FULL=0 | EMPTY=0
+# [SV] Read Data: HholacXQLH
+# [TB] Time=2780000 | FULL=0 | EMPTY=0
+# [SV] Read Data: HholacXQLH
+# [TB] Time=2810000 | FULL=0 | EMPTY=0
+# [SV] Read Data: HholacXQLH
+# [TB] Time=2840000 | FULL=0 | EMPTY=0
+# [SV] Read Data: kSAXWehwpc
+# [TB] Time=2870000 | FULL=0 | EMPTY=0
+# [SV] Read Data: KigG8PjTGM
+# [TB] Time=2900000 | FULL=0 | EMPTY=0
+# [SV] Read Data: iLtKxKkIYw
+# [TB] Time=2930000 | FULL=0 | EMPTY=0
+# [SV] Read Data: Q8EOWYs1IX
+# [TB] Time=2960000 | FULL=0 | EMPTY=0
+# [SV] Read Data: TS30W1F6JJ
+# [TB] Time=2990000 | FULL=0 | EMPTY=0
+# [SV] Read Data: TS30W1F6JJ
+# [TB] Time=3020000 | FULL=0 | EMPTY=0
+# [SV] Read Data: TS30W1F6JJ
+# [TB] Time=3050000 | FULL=0 | EMPTY=0
+# [SV] Read Data: IrS1zF9ZOX
+# [TB] Time=3080000 | FULL=0 | EMPTY=0
+# [SV] Read Data: LcUNqqlWfu
+# [TB] Time=3110000 | FULL=0 | EMPTY=0
+# [SV] Read Data: syAlmXbpTk
+# [TB] Time=3140000 | FULL=0 | EMPTY=0
+# [SV] Read Data: wbPFQEIQdU
+# [TB] Time=3170000 | FULL=0 | EMPTY=0
+# [SV] Read Data: lnw50ajcvE
+# [TB] Time=3200000 | FULL=0 | EMPTY=0
+# [SV] Read Data: lnw50ajcvE
+# [TB] Time=3230000 | FULL=0 | EMPTY=0
+# [SV] Read Data: lnw50ajcvE
+# [TB] Time=3260000 | FULL=0 | EMPTY=0
+# [SV] Read Data: Kd1KCdhdHy
+# [TB] Time=3290000 | FULL=0 | EMPTY=0
+# [SV] Read Data: B1NO6cSFqu
+# [TB] Time=3320000 | FULL=0 | EMPTY=0
+# [SV] Read Data: ZRXKNNiwnT
+# [TB] Time=3350000 | FULL=0 | EMPTY=0
+# [SV] Read Data: zvwq4xHZOO
+# [TB] Time=3380000 | FULL=0 | EMPTY=0
+# [SV] Read Data: OQGZeA1vDh
+# [TB] Time=3410000 | FULL=0 | EMPTY=0
+# [SV] Read Data: OQGZeA1vDh
+# [TB] Time=3440000 | FULL=0 | EMPTY=0
+# [SV] Read Data: OQGZeA1vDh
+# [TB] Time=3470000 | FULL=0 | EMPTY=0
+# [SV] Read Data: dbx0lABJun
+# [TB] Time=3500000 | FULL=0 | EMPTY=0
+# [SV] Read Data: bjYLNQ8VqN
+# [TB] Time=3530000 | FULL=0 | EMPTY=0
+# [SV] Read Data: h4dlR5mJon
+# [TB] Time=3560000 | FULL=0 | EMPTY=0
+# [SV] Read Data: oHEb7pZ7xK
+# [TB] Time=3590000 | FULL=0 | EMPTY=0
+# [SV] Read Data: kOr6Z5NYO3
+# [TB] Time=3620000 | FULL=0 | EMPTY=0
+# [SV] Read Data: kOr6Z5NYO3
+# [TB] Time=3650000 | FULL=0 | EMPTY=0
+# [SV] Read Data: kOr6Z5NYO3
+# [TB] Time=3680000 | FULL=0 | EMPTY=0
+# [SV] Read Data: jvvAXA57Jk
+# [TB] Time=3710000 | FULL=0 | EMPTY=0
+# [SV] Read Data: kyrpNnSniF
+# [TB] Time=3740000 | FULL=0 | EMPTY=0
+# [SV] Read Data: vGRcCrVNDj
+# [TB] Time=3770000 | FULL=0 | EMPTY=0
+# [SV] Read Data: EkVxkqyfl5
+# [TB] Time=3800000 | FULL=0 | EMPTY=0
+# [SV] Read Data: DJrtw5WFg4
+# [TB] Time=3830000 | FULL=0 | EMPTY=0
+# [SV] Read Data: DJrtw5WFg4
+# [TB] Time=3860000 | FULL=0 | EMPTY=0
+# [SV] Read Data: DJrtw5WFg4
+# [TB] Time=3890000 | FULL=0 | EMPTY=0
+# [SV] Read Data: IR8at8FDMG
+# [TB] Time=3920000 | FULL=0 | EMPTY=0
+# [SV] Read Data: mOq5AOjytK
+# [TB] Time=3950000 | FULL=0 | EMPTY=0
+# [SV] Read Data: rvUZeGUyJ0
+# [TB] Time=3980000 | FULL=0 | EMPTY=0
+# [SV] Read Data: qSFoqwmtzw
+# [TB] Time=4010000 | FULL=0 | EMPTY=0
+# [SV] Read Data: zc9dX9r7vY
+# [TB] Time=4040000 | FULL=0 | EMPTY=0
+# [SV] Read Data: zc9dX9r7vY
+# [TB] Time=4070000 | FULL=0 | EMPTY=0
+# [SV] Read Data: zc9dX9r7vY
+# [TB] Time=4100000 | FULL=0 | EMPTY=0
+# [SV] Read Data: FcJZ1leJZn
+# [TB] Time=4130000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 7D3CrjzSSo
+# [TB] Time=4160000 | FULL=0 | EMPTY=0
+# [SV] Read Data: EFEDiaCNXv
+# [TB] Time=4190000 | FULL=0 | EMPTY=0
+# [SV] Read Data: kaOryFTSPq
+# [TB] Time=4220000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 3KuxNZWArn
+# [TB] Time=4250000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 3KuxNZWArn
+# [TB] Time=4280000 | FULL=0 | EMPTY=0
+# [SV] Read Data: 3KuxNZWArn
+# [TB] Time=4310000 | FULL=0 | EMPTY=0
+# [SV] Read Data: mwsrxPHyac
+# [TB] Time=4340000 | FULL=0 | EMPTY=0
+# [SV] Read Data: jA2xsq196E
+# [TB] Time=4370000 | FULL=0 | EMPTY=0
+# [SV] Read Data: n0OXlZx5Ze
+# [TB] Time=4400000 | FULL=0 | EMPTY=0
+# [SV] Read Data: iAOPrCewy2
+# [TB] Time=4430000 | FULL=0 | EMPTY=0
+# [SV] Read Data: OX3EJjtAgp
+# [TB] Time=4460000 | FULL=0 | EMPTY=0
+# [SV] Read Data: OX3EJjtAgp
+# [TB] Time=4490000 | FULL=0 | EMPTY=0
+# [SV] Read Data: OX3EJjtAgp
+# [TB] Time=4520000 | FULL=0 | EMPTY=0
+# [SV] Read Data: EJdQfCqS8D
+# [TB] Time=4550000 | FULL=0 | EMPTY=0
+# [SV] Read Data: ugD7vs7Nev
+# [TB] Time=4580000 | FULL=0 | EMPTY=0
+# [SV] Read Data: GsG7vPeeP8
+# [TB] Time=4610000 | FULL=0 | EMPTY=0
+# [SV] Read Data: HRHjiklM0j
+# [TB] Time=4640000 | FULL=0 | EMPTY=0
+# [SV] Read Data: PlGRgz9dBe
+# [TB] Time=4670000 | FULL=0 | EMPTY=0
+# [SV] Read Data: PlGRgz9dBe
+# [TB] Time=4700000 | FULL=0 | EMPTY=0
+# [SV] Read Data: PlGRgz9dBe
+# [TB] Time=4730000 | FULL=0 | EMPTY=0
+# [SV] Read Data: OFKUA3keXx
+# [TB] Time=4760000 | FULL=0 | EMPTY=0
+# [SV] Read Data: adFhClGnx6
+# [TB] Time=4790000 | FULL=0 | EMPTY=0
+# [SV] Read Data: LAfPRBEPeD
+# [TB] Time=4820000 | FULL=0 | EMPTY=0
+# [SV] Read Data: rqIz9IthmG
+# [TB] Time=4850000 | FULL=0 | EMPTY=0
+# [SV] Read Data: UChXij8oLt
+# [TB] Time=4880000 | FULL=0 | EMPTY=0
+# [SV] Read Data: UChXij8oLt
+# [TB] Time=4910000 | FULL=0 | EMPTY=0
+# [SV] Read Data: UChXij8oLt
+# [TB] Time=4940000 | FULL=0 | EMPTY=0
+# [SV] Read Data: iWuElBFnOk
+# [TB] Time=4970000 | FULL=0 | EMPTY=0
+# [SV] Read Data: r5OzvN8eui
+# [TB] Time=5000000 | FULL=0 | EMPTY=0
+# [SV] Read Data: iDjGaFnXry
+# [TB] Time=5030000 | FULL=0 | EMPTY=0
+# [SV] Read Data: GPI0Tt0XXE
+# [TB] Time=5060000 | FULL=0 | EMPTY=1
+# [TB] FIFO EMPTY: Stopping Reads!
+# ** Note: $finish    : testbench.sv(78)
+#    Time: 5160 ns  Iteration: 0  Instance: /testbench
+# 1
+# Break in Module testbench at testbench.sv line 78
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/manyadn1/test/wave.do

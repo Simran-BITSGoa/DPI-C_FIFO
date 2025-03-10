@@ -1,5 +1,4 @@
 package packet_pkg;
-  
     // Define packet structure (10-byte packets)
     typedef struct packed {
         logic [7:0] byte0;
@@ -13,6 +12,5 @@ package packet_pkg;
         logic [7:0] byte8;
         logic [7:0] byte9;
     } packet_t;
-
 endpackage
 
