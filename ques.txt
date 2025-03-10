@@ -1,0 +1,9 @@
+Why use a FIFO?
+It prevents data loss when the producer (C) is faster than the consumer.
+It allows asynchronous operation since write and read clocks are different
+What is the write clock frequency.
+50 Mhz
+What is the read clock frequency.
+25Mhz
+What is the width of the fifo
+ 8 bits per packet (1 character per packet)
