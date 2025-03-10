@@ -85,12 +85,3 @@ vsim -c -sv_lib ./hello -do "run -all" testbench
 
 ---
 
-## Author
-
-**Manvendra **
-
----
-
-Happy coding! ??
-
-
